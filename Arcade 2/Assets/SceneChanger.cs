@@ -32,7 +32,10 @@ public class SceneChanger : MonoBehaviour {
             SceneManager.LoadScene("End");
         }
     }
-
+    public static string getScene()
+    {
+        return SceneManager.GetActiveScene().name;
+    }
     public void Restart()
     {
         SceneManager.LoadScene("Menu");

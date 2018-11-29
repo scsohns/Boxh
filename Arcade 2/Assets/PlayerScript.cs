@@ -31,11 +31,17 @@ public class PlayerScript : MonoBehaviour {
         rb.velocity = (new Vector2(x, y));
         x = y = 0;
 
+        
 
         //print(count);
         //rb.AddForce(new Vector2(x , y));
 
     }
+    public void SpriteChange(Sprite sprite)
+    {
+        GetComponent<SpriteRenderer>().sprite = sprite;
+    }
+
     public void Freeze()
     {
         

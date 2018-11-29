@@ -53,3 +53,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 114269147615738298, guid: 1c58a4d9204b3ed45b7fb409528765d9, type: 2}
   goal: {fileID: 114837696382062126, guid: 4a5f76938ad6be248b0f85b27da816f8, type: 2}
+  firstPlayer: {fileID: 21300000, guid: 3b9099588c073e84c8961eec31bde504, type: 3}
+  secondPlayer: {fileID: 21300000, guid: 666c5d87bc23d4b4f9a49b5aeaff4739, type: 3}
+  thirdPlayer: {fileID: 21300000, guid: 6b12fb461b8c99c4b9efa1bb145ed5f8, type: 3}
