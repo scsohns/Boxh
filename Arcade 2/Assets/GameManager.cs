@@ -23,11 +23,12 @@ public class GameManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        p1 = Instantiate(player);
-        g1 = Instantiate(goal);
+        Spawn();
         ChangeSprite();
-        x = goal.transform.position.x;
-        y = goal.transform.position.y;
+        x = g1.transform.position.x;
+
+        y = g1.transform.position.y;
+        print(x + " " + y);
         cleared = false;
         
 	}
@@ -58,7 +59,29 @@ public class GameManager : MonoBehaviour {
         
         
     }
+    private void Spawn()
+    {
+        string curr = SceneChanger.getScene();
+        if (curr == "StageOne")
+        {
+            p1 = Instantiate(player, new Vector3(-10, -5, 0), transform.rotation);
 
+            g1 = Instantiate(goal, new Vector3(10, 5, 0), transform.rotation);
+        }
+        else if (curr == "StageTwo")
+        {
+            p1 = Instantiate(player, new Vector3(-12, -6, 0), transform.rotation);
+
+            g1 = Instantiate(goal, new Vector3(12, 6, 0), transform.rotation);
+        }
+        else if (curr == "StageThree")
+        {
+            p1 = Instantiate(player, new Vector3(-14, -7, 0), transform.rotation);
+
+            g1 = Instantiate(goal, new Vector3(14, 7, 0), transform.rotation);
+        }
+
+    }
     private void ChangeSprite()
     {
         string curr = SceneChanger.getScene();
